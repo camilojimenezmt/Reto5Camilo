@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Mensajes</title>
+    <link rel="shortcut icon" href="Icons/Mensaje.png">
+    <meta charset="utf-8">
+    <meta name="description" content="Este es un documento contiene los mensajes dejados por lo clientes para Fincas">
+    <meta name="keywords" content="Fincas, Mensajes, Clientes">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="misestilos.css">
+    <script type="text/javascript" src="js/misFuncionesMensajes.js"></script>  
+</head>
+
+<body id= "fondo2">
+    <header id="cabeceralogo">
+        <div>
+        <h1>Mensajes </h1>
+        </div>
+    </header>
+    <nav id="menuprincipal">
+        <div>
+            <ul>
+                <li><a href="index.html">Principal</a></li>
+                <li><a href="Reportes.html">Reportes</a></li>
+                <li><a href="Categorias.html">Categorias</a></li>
+                <li><a href="Clientes.html">Clientes</a></li>
+                <li><a href="Mensajes.html">Mensajes</a></li>
+                <li><a href="Reservaciones.html">Reservaciones</a></li>
+                <li><a href="finca.html">Fincas</a></li>
+            </ul>
+        </div>
+    </nav>
+
+<fieldset style="width: 98%">
+    <legend>Registro y consulta de Mensajes</legend>
+    <center>
+        <table>
+            <tbody>
+                <div>
+                    <tr>                   
+                        <td><span style="color:#000000"><center><h3><b>Mensaje</b></h3></center></span></td>
+                        <td><input type="text" id="messagetext" placeholder="Ingrese el mensaje"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <select id="select-client"></select>
+                            <script type="text/javascript">
+                            window.onload = autoInicioRelacionCliente();
+                            </script>
+                        </td>
+                        <td>
+                            <select id="select-finca"></select>
+                            <script type="text/javascript">
+                                window.onload = autoIniciofinca();
+                            </script>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><center><button id="button1" onclick="guardarInformacionMensajes()">Guardar Mensajes</button></center></td>
+                        <td><center><button id="button1" onclick="consultarInformacionMensajes()">Consultar Mensajes</button></center></td>
+                    </tr>
+                </div>
+            </tbody>
+        </table>
+    </center>      
+    </fieldset>
+
+    <!--Espacios en html-->
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    
+    <center><div id="resultadoMensajes"></div></center>
+    <script type="text/javascript"> 
+    window.onload = consultarInformacionMensajes();
+    </script>
+</body>
+</html>

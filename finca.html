@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Fincas</title>
+    <link rel="shortcut icon" href="Icons/Finca.png">
+    <meta charset="utf-8">
+    <meta name="description" content="Este es un documento contiene las fincas y su categoria">
+    <meta name="keywords" content="Fincas, Castegoria, Guardar">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="misestilos.css">
+    <script type="text/javascript" src="js/misFuncionesFincas.js"></script>
+</head>
+
+<body id= "fondo2">
+    <header id="cabeceralogo">
+        <div>
+            <h1>Fincas</h1>
+        </div>
+    </header>
+    <nav id="menuprincipal">
+        <div>
+            <ul>
+                <li><a href="index.html">Principal</a></li>
+                <li><a href="Reportes.html">Reportes</a></li>
+                <li><a href="Categorias.html">Categorias</a></li>
+                <li><a href="Clientes.html">Clientes</a></li>
+                <li><a href="Mensajes.html">Mensajes</a></li>
+                <li><a href="Reservaciones.html">Reservaciones</a></li>
+                <li><a href="finca.html">Fincas</a></li>
+            </ul>
+        </div>
+    </nav>
+<fieldset style="width: 98%">
+    <legend>Registro y consulta de Fincas</legend>
+    <center>
+    <table>
+        <tbody>
+            <div>
+                <tr> 
+                    <td><b><h3><label>Nombre:</label></h3></b></td>
+                    <td><input type="text" id="name2" placeholder="Ingrese el nombre" ><br></td>
+                </tr>
+                <tr> 
+                    <td><b><h3><label>Dirección:</label></h3></b></td>
+                    <td><input  type="text" id="address" placeholder="Ingrese la Direccion" ><br></td>
+                </tr>
+                <tr>
+                    <td><b><h3><label>Extensión:</label></h3></b></td>
+                    <td><input  type="number" id="extension" placeholder="Ingrese la Extension"><br></td>
+                </tr>
+                <tr>
+                    <td><b><h3><label>Descripcion:</label></h3></b></td>
+                    <td><input  type="text" id="description2" placeholder="Ingrese la descripcion" ><br></td>
+                </tr>
+                <tr>
+                    <td><select id="select-category"></select>
+                    <script type="text/javascript">
+                        window.onload = autoInicioCategoria();
+                </script></td>
+                </tr>
+                <tr>
+                    <td><center><button id="button1" onclick="agregarFinca()">Guardar Finca</button></center></td>
+                    <td><center><button id="button1" onclick="traerInformacionFincas()" > Consultar finca</button></center></td>
+                </tr>
+        
+            </div>
+        </tbody>
+    </table>
+    </center>      
+    </fieldset>
+
+    <!--Espacios en html-->
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;
+
+    <center><div id="miListafinca"></div></center>
+</body>
+</html>
